@@ -1,0 +1,448 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+  scroll-behavior: smooth;
+  color: white;
+  background-color: #090929;
+  transition: all 0.1s ease-in-out;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 50px;
+  margin-top: -10px;
+  align-items: center;
+  
+}
+
+header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a:hover {
+
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+}
+
+
+.nav-left {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.subscription,
+.grid {
+  filter: invert(1);
+  height: 21px;
+  width: 21px;
+}
+
+.nav-Right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+padding: 20px;
+}
+
+.logo {
+  height: 20px;
+}
+
+.user {
+  height: 35px;
+  width: 35px;
+}
+
+.join {
+  background-color: #1a98ff;
+  height: 45px;
+  width: 110px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.join:hover {
+  background-color: #1ba0ff;
+  scale: 1.1;
+box-shadow:
+    #40aefd 0px 50px 100px -20px,
+    rgb(255, 255, 255) 0px 30px 60px -30px;
+}
+
+.dropdown  {
+  position: relative;
+}
+
+.language a{
+
+    font-size: 15px;
+}
+
+.language{
+    position: absolute;
+    top: 40px;
+    right: -180px;
+     border-radius: 5px;
+    padding: 10px;
+    column-count: 4;
+    display: none;
+    backdrop-filter: blur(10px);
+}
+
+.dropdown:hover .language{
+    display: block;
+}
+
+.grid-dropdown {
+
+    position:relative;
+}
+
+.grid-dropdown a{
+
+    font-size: 15px;
+} 
+.genres{
+
+    position: absolute;
+    top: 40px;
+    right: -150px;
+    backdrop-filter: blur(10px);
+      border-radius: 5px;
+    padding: 10px;
+    column-count: 2;
+    display: none;
+}   
+
+.grid-dropdown:hover .genres{
+    display: block;
+}
+
+#hero{
+
+     background-image: url("./image/poster.avif");
+    width: 100vw;
+    height: 90vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  gap: 15px;
+}
+
+.title-movie{
+
+    width: 600px;
+    padding-top: 150px;
+    padding-left: 100px;
+    
+}
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+    z-index: 100;
+    margin-left: 150px;
+}
+
+.prime{
+
+    margin-top: -50px;
+    height: 70px;
+    width: 150px;
+    font-size: 25px;
+    color: white;
+    background-color: #33363d;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+
+}
+
+.prime:hover {
+  background-color: white;
+  color: black;
+}
+
+.add,.detail {
+
+   margin-top: -50px;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  background-color: #33363d;
+  border: none;
+  color: white;
+  font-size: 30px;
+}
+
+.add:hover, .detail:hover {
+  background-color: white;
+  color: black;
+}
+
+.bag{
+    color:yellow
+}
+
+.watch{
+
+    margin-left: 110px;
+    margin-top: 10px;
+}
+
+.movie-title{
+
+    display: flex;
+    gap: 20px;
+    margin-top: -70px;
+    margin-left: 50px;
+
+
+}
+
+
+.movie-wrapper{
+
+  display: flex;
+  gap: 60px;
+  counter-reset: movie-rank;
+}
+
+.movie-image {
+  
+  width: 400px;
+ 
+}
+.movie-card{
+
+  display: flex;
+  flex-direction: column;
+  border-radius:10px;
+  position: relative;
+  transition: all 1s;
+  width:20vw;
+  counter-increment: movie-rank;
+
+}
+
+/* .movie-card::before {
+  content: counter(movie-rank);
+  position: absolute;
+  font-size: 160px;
+  font-weight: 800;
+  left: -80px;
+  z-index: -1;
+  color: #33363d;
+} */
+
+.movie-card:hover{
+
+  transform: scale(1.1);
+  z-index: 20;
+}
+
+.movie-image img {
+
+    height: 25vh;
+    width: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.movie-hidden-detail{
+
+  background-color: #00050c;
+ display: none;
+  border-radius: 10px;
+  margin-top: -4px;
+  margin-left: 25px;
+  position: relative;
+  top: 100%;
+ left: 2.5%;
+  width: 120%;
+  padding-left: 30px;
+  
+}
+
+
+.movie-card:hover .movie-hidden-detail {
+  display: block;
+  position: absolute;
+ 
+  
+}
+.free {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+
+.true {
+  background-color: #0072f9;
+  border-radius: 50%;
+  height: 17px;
+  width: 17px;
+}
+
+.play-btn{
+
+  height: 40px;
+  width: 140px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 5px;
+  
+}
+
+.film,.new-add {
+
+   margin-right: 5px;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  background-color: #33363d;
+  border: none;
+  color: white;
+  font-size: 20px;
+ 
+}
+
+.film:hover,.new-add:hover {
+  background-color: white;
+  color: black;
+}
+
+.card-rank {
+  margin-top: 5px;
+  font-size: 18px;
+  color:aquamarine
+}
+.card-description{
+
+  margin-top: 5px;
+}
+
+
+
+/* -----sec----- */
+
+.movies-popular {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 0px;
+  margin-top: -10px;
+  
+}
+
+.movie-title-popular {
+ 
+  display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.movie-card-wrapper-popular {
+  display: flex;
+  gap: 60px;
+  counter-reset: movie-rank;
+}
+
+
+.movie-card-popular {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  position: relative;
+  transition: all 1s;
+  width: 20vw;
+  margin-top: -20px;
+  
+ 
+}
+
+.movie-card-popular:hover {
+  transform: scale(1.1);
+  z-index: 20;
+}
+
+.movie-image-popular img {
+ height: 25vh;
+    width: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+
+
+.movie-hidden-detail-popular {
+  background-color: #00050c;
+ display: none;
+  border-radius: 10px;
+  margin-top: -4px;
+  margin-left: 35px;
+  position: relative;
+  top: 100%;
+ left: 2.5%;
+  width: 115%;
+   padding-left: 30px;
+ 
+}
+
+.movie-card-popular:hover .movie-hidden-detail-popular {
+  display: block;
+  position: absolute;
+  
+}
+
+
+
